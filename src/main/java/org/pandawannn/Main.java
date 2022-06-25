@@ -16,6 +16,9 @@ import static org.pandawannn.XMPReader.getDate;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Start...");
+        if(args.length != 1) {
+            throw new RuntimeException("Please enter a valid folder");
+        }
         String path = args[0];
         if (!new File(path).exists()) {
             throw new RuntimeException("unknown path: " + path);
